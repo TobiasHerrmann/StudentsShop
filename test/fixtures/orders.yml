@@ -1,0 +1,12 @@
+
+one:
+  name: Tobias Herrmann
+  address: MeinText
+  email: tobias@example.org
+  pay_type: Check
+
+two:
+  name: MyString
+  address: MyText
+  email: MyString
+  pay_type: MyString

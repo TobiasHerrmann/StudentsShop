@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  image_url: MyString
+  price: 9.99
+
+two:
+  title: MyString
+  description: MyText
+  image_url: MyString
+  price: 9.99
+	
+ruby:
+	title: Jetzt lerne Ich Android
+	description:
+		Android ist derzeit eines der wichtigsten und heissesten Betriebssysteme fue Handys bzw. Smartphones und andere 
+		mobile Geraete. Und jeder, der ueber ein wenig JavaKenntnisse verfuegt, kann eigene Programme fuer diese Geraete
+		schreiben. Die Apps in diesem Buch zielen vor allem auf Handys ab und fuehren Sie mit Spass und Kompetenz Schritt
+		fuer Schritt in die aufregende Welt der AndroidProgrammierung ein.
+	price: 29.95
+	image_url: /assets/AndroidAppBuch.jpg
+		
+		

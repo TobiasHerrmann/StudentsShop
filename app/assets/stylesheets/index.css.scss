@@ -1,0 +1,96 @@
+// Place all the styles related to the index controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	background: url(/assets/images/wallpaper_muenster_aasee_p78-de.jpg);
+}
+
+#container {
+	
+	margin: 0 auto;
+	padding: 0px;
+	font-family: Arial;
+}
+
+/* Navigation */
+
+ul#navbar {
+	margin: 0;
+	padding: 0;
+	list-style:none;
+	width:1000px;
+}
+#navbar li {
+   list-style: none;
+   float: left; 
+}
+#navbar li a {
+   display: block;
+   padding: 5px 8px;
+   background-color: #000000;
+   color: #fff;
+   text-decoration: none;
+	 width:183px; 
+	 font-family: Arial;
+   text-align:center;
+   border-left:1px solid #fff;
+}
+ul#navbar li a:hover {
+  background:#a9a9a9;
+  color:#ffffff
+}
+#navbar li ul {
+   display: none; 
+   width: 10em; /* Width to help Opera out */
+   background-color: #fff;
+}
+#navbar li:hover ul, #navbar li.hover ul {
+   display: block;
+   position: absolute;
+   margin: 0;
+   padding: 0; 
+}
+#navbar li:hover li, #navbar li.hover li {
+   float: none; 
+}
+#navbar li:hover li a, #navbar li.hover li a {
+   background-color: #696969;
+   border-bottom: 1px solid #fff;
+   color: #fff; 
+}
+#navbar li li a:hover {
+   background-color: #a9a9a9; 
+}
+
+#figure p {
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+}
+
+
+#banner {
+	  background: #ffffff;
+	  padding: 10px;
+	  border-bottom: 2px solid;
+	  font: small-caps 40px/40px "Arial", serif;
+	  color: #000000;
+	  text-align: center;
+
+	  img {
+	    float: left;
+			width: 50px;
+			heigth: 50px;
+	  }
+	}
+
+.footer {
+  position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+  padding-top:20px;
+} 
+

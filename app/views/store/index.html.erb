@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lehrbuch-Katalog</title>
+	<%= stylesheet_link_tag "store" %>
+</head>
+
+<body class="<%= controller.controller_name %>">
+
+<div>		
+	<h3><i class="icon-book"></i>Lehrbuch-Katalog</h3>
+</div>
+	
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span9">
+      <!--Body content-->
+			<div id="main">
+				<% @products.each do |product| %>
+				<div class="entry">
+					<%= image_tag(product.image_url) %>
+					<h3><%= product.title %></h3>
+					<%= sanitize(product.description) %>
+					<div class="price_line">
+						<span class="price"><%= number_to_currency(product.price) %></span>
+						<%= button_to 'In den Warenkorb legen', line_items_path(product_id: product), remote: true %>
+					</div>
+				</div>
+				<% end %>
+			</div>
+    </div>
+    <div class="span3" style="background-color: #eeeeee;">
+      <!--Sidebar content-->
+			<div id="side">
+				<div id="cart">
+					<% if @cart %>
+					
+		        <%= render @cart %>
+						<% end %>
+				</div>
+				<hr>
+				<p><%= link_to 'Neues Buch einstellen', new_product_path%></p>
+				<p><%= link_to 'Mein Warenkorb', carts_path %></p>
+			</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

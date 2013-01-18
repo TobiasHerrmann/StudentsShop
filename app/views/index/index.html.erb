@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Students-Shop</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+  <![endif]-->
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	
+	<div>
+		<h3><i class="icon-home"></i>Herzlich Willkommen auf Stundents-Shop.de</h3>
+	</div>
+
+  <div class="container">
+    <div class="row">
+      <div class="span8">
+				<p>
+					Auf dieser Webseite finden Studenten und Studieninteressierte wichtige Informationen abseits des eigentlichen Studiengangs.<br>
+					<strong>Was heißt das?</strong><br>
+					Um ein Studium in Münster vollständig zu machen, benötigt es noch ein paar weitere Dinge. Und bei genau diesen Dingen springt <strong>Students-Shop.de</strong> ein. Das Motto dieser Webseite ist relativ einfach: <strong>Studenten helfen Studenten!</strong><br> Hier können Studenten ihre Bücher verkaufen und auch angebotene Bücher kaufen. Zudem gibt es hier Informationen zum aktuellen Wohnungsmarkt. Auch hier können Wohnungen angeboten und auch gesucht werden.<br>
+					Desweiteren könnt Ihr euch in unserem Forum über weitere Themen des Studentenlebens in Münster austauschen.<br>
+					Bei Fragen könnt Ihr euch auch gerne an uns wenden. Wir freuen uns auf eure Fragen und Anregungen.
+				</p>
+				<br><br>
+				<p>
+					<a href="/users/sign_in" class="btn btn-large btn-primary disabled">Anmelden</a>
+					<a href="/users/sign_up" class="btn btn-large btn-primary disabled">Registrieren</a>
+				</p>
+      </div>
+      <div class="span4">
+				<div id="figure">
+      		<img src="/assets/imagefilm_unims.jpg" class="img-rounded">
+					<p>Westfälische Wilhelms-Universität Münster</p>
+				</div>
+				<div id="figure">
+					<img src="/assets/fh2_mittel.jpg" class="img-rounded">
+					<p>Fachhochschule Münster</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+

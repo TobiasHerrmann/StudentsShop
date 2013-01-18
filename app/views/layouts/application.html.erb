@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Students-Shop</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+  <![endif]-->
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<script type="text/javascript" src="/twitter-bootstrap/twitter-bootstrap-v2/docs/assets/js/jquery.js"></script>  
+	    <script type="text/javascript" src="/twitter-bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-dropdown.js"></script>  
+	    <script type="text/javascript">  
+	        $(document).ready(function () {  
+	            $('.dropdown-toggle').dropdown();  
+	        });  
+	   </script>  
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="/index">Students-Shop</a>
+        <div class="nav-collapse">
+          <ul class="nav">
+						<li class="dropdown">  
+						    <a href="#"  
+						          class="dropdown-toggle"  
+						          data-toggle="dropdown">  
+						          Lehrbücher  
+						          <b class="caret"></b>  
+						    </a>  
+						    <ul class="dropdown-menu">  
+						     <li><%= link_to "Shop", store_index_path %></li>  
+						  	 <li><%= link_to "Neues Buch einstellen", new_product_path %></li>  
+						  	 <li><%= link_to "Meine Bestellungen", orders_path %></li>  
+						    </ul>  
+						  </li>
+							<li class="dropdown">  
+							    <a href="#"  
+							          class="dropdown-toggle"  
+							          data-toggle="dropdown">  
+							          Wohnen  
+							          <b class="caret"></b>  
+							    </a>  
+							    <ul class="dropdown-menu">  
+							     <li><%= link_to "Wohnungsmarkt" %></li>  
+							  	 <li><%= link_to "Neue Wohnung anbieten" %></li>  
+							  	 <li><%= link_to "Meine Beobachtungen" %></li>  
+							    </ul>  
+							  </li>
+								<li class="dropdown">  
+								    <a href="#"  
+								          class="dropdown-toggle"  
+								          data-toggle="dropdown">  
+								          Forum  
+								          <b class="caret"></b>  
+								    </a>  
+								    <ul class="dropdown-menu">  
+								     <li><%= link_to "Übersicht"%></li>  
+								  	 <li><%= link_to "Neues Forum erstellen" %></li>  
+								  	 <li><%= link_to "Chat" %></li>  
+								    </ul>  
+								  </li>      
+            <li><%= link_to "Kontakt", kontakt_path %></li> 
+          </ul>
+					<ul class="nav pull-right">
+					   <li class="divider-vertical"></li>
+							 
+					 		<% if current_user %>
+					 		 <li>Welcome, <%= current_user.email %>!</li>
+					 		 <li><%= link_to "Abmelden", destroy_user_session_path, method: :delete %></li>
+					 		<% else %>
+					 		<li><%= link_to "Anmelden", new_user_session_path %></li>
+					 		<li><%= link_to "Registrieren", new_user_registration_path %></li>
+					 		<% end%>
+							 
+					</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="span12"><%= yield %></div>
+    </div>
+  </div>
+</body>
+</html>
+	
+<!-- 
+	<div>
+		<p>
+		<% if current_user %>
+		 <li>Welcome, <%= current_user.email %>!</li>
+		 <li><%= button_to "Abmelden", destroy_user_session_path, method: :delete %></li>
+		<% else %>
+		<li><%= button_to "Anmelden", new_user_session_path %></li>
+		<li><%= button_to "Registrieren", new_user_registration_path %></li>
+		<% end%>
+		<li><%= button_to "Meine Bestellungen", orders_path %></li>
+		</p>
+	</div>
+	-->

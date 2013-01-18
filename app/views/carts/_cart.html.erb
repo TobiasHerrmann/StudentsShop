@@ -1,0 +1,16 @@
+<div class="cart_title">Ihr Warenkorb<div>
+<table>
+	
+	<%= render(cart.line_items)%>
+	
+	<tr class="total_line">
+		<td colspan="2">Total</td>
+		<td class="total_cell"><%= number_to_currency(cart.total_price) %></td>
+	</tr>
+</table> 
+<br>
+<%= button_to 'Zur Kasse gehen', new_order_path, method: :get %>
+<%= button_to 'Warenkorb leeren', cart, method: :delete, 
+						confirm: 'Sind Sie sicher, dass Sie den Warenkorb leeren möchten?' %>
+						
+<p id="pdf_link"><%= link_to "Download Invoice (PDF)", cart_path(@cart, :format => "pdf") %></p>
