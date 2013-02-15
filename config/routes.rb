@@ -1,4 +1,6 @@
 StudentaInfo::Application.routes.draw do
+  resources :bookmarks
+
   resources :contact_messages
 
   resources :orders
@@ -17,14 +19,14 @@ StudentaInfo::Application.routes.draw do
     get :who_bought, on: :member
   end
   
-    
-
 
   get "index" => "index#index"
   get "index/hello"
   get "impressum" => "index#impressum"
   get "kontakt" => "index#kontakt"
   get "datenschutz" => "index#datenschutz"
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
