@@ -11,18 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130104114538) do
+ActiveRecord::Schema.define(:version => 20130102161806) do
 
   create_table "carts", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "contact_messages", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "betreff"
-    t.text     "message"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

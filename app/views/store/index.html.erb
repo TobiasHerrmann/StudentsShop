@@ -19,6 +19,11 @@
 <div class="container-fluid">
   <div class="row-fluid">
     <div class="span9">
+			<form class="form-search">
+			  <input type="text" class="input-medium search-query">
+			  <button type="submit" class="btn">Suchen</button>
+			</form>
+			<a href="/products/new" class="btn btn-default btn-primary disabled">Neues Buch einstellen</a>
       <!--Body content-->
 			<div id="main">
 				<% @products.each do |product| %>
@@ -44,7 +49,6 @@
 						<% end %>
 				</div>
 				<hr>
-				<p><%= link_to 'Neues Buch einstellen', new_product_path%></p>
 				<p><%= link_to 'Mein Warenkorb', carts_path %></p>
 			</div>
     </div>

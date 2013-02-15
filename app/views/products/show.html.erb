@@ -4,6 +4,7 @@
 </div>
 
 <dl class="dl-horizontal">
+	<dt><%= image_tag @product.photo.url(:small) %></dt>
   <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
   <dd><%= @product.title %></dd>
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
@@ -12,14 +13,6 @@
   <dd><%= @product.image_url %></dd>
   <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
   <dd><%= @product.price %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:photo_file_name) %>:</strong></dt>
-  <dd><%= @product.photo_file_name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:photo_content_type) %>:</strong></dt>
-  <dd><%= @product.photo_content_type %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:photo_file_size) %>:</strong></dt>
-  <dd><%= @product.photo_file_size %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:photo_updated_at) %>:</strong></dt>
-  <dd><%= @product.photo_updated_at %></dd>
 </dl>
 
 <div class="form-actions">
