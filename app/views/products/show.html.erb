@@ -3,7 +3,7 @@
   <h1><%=t '.title', :default => model_class.model_name.human %></h1>
 </div>
 
-<dl class="dl-horizontal">
+<!--><dl class="dl-horizontal">
 	<dt><%= image_tag @product.photo.url(:small) %></dt>
   <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
   <dd><%= @product.title %></dd>
@@ -14,6 +14,25 @@
   <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
   <dd><%= @product.price %></dd>
 </dl>
+<!-->
+
+<table class="table table-condensed">
+	<tbody>
+		<tr>
+			<td>
+				<%= image_tag @product.photo.url(:small) %>
+			</td>
+			<td>
+			  <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
+			  <dd><%= @product.title %></dd>
+			  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
+			  <dd><%= @product.description %></dd>
+			  <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
+			  <dd><%= @product.price %></dd>
+			</td>
+		</tr>
+	</tbody>
+</table>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
