@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Students-Shop</title>
+  <title>Students-Shop - <%= @title || "Unbenannt" %></title>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
   <![endif]-->
@@ -77,8 +77,8 @@
 									          <b class="caret"></b>  
 									    </a>  
 									    <ul class="dropdown-menu">  
-									     <li><%= link_to "Übersicht"%></li>  
-									  	 <li><%= link_to "Neuen Link einstellen" %></li>   
+									     <li><%= link_to "Übersicht", bookmarks_path%></li>  
+									  	 <li><%= link_to "Neuen Link einstellen", new_bookmark_path %></li>   
 									    </ul>  
 									  </li>      
             <li><%= link_to "Kontakt", kontakt_path %></li> 

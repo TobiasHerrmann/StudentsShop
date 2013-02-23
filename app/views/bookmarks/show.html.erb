@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% @title = "Details zum Link"%>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+  <![endif]-->
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h3>Detail zum Link</h3>
+	<p>
+		<b>Titel:</b>
+		<%= @bookmark.title%>
+	</p>
+	<p>
+		<b>URL:</b>
+		<%= @bookmark.url%>
+	</p>
+	<p>
+		<b>Kommentar:</b>
+		<%= @bookmark.comment%>
+	</p>
+	<p>
+		<b>Erstellt am:</b>
+		<%= @bookmark.created_at%>
+	</p>
+	<p>
+		<b>Geändert am:</b>
+		<%= @bookmark.updated_at%>
+	</p>
+	
+	<p>
+		<%= link_to "Zurück zur Liste", bookmarks_path %>
+	</p>
+
+</body>
+</html>

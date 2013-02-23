@@ -1,4 +1,8 @@
 StudentaInfo::Application.routes.draw do
+  get "bookmarks/edit"
+
+  get "bookmarks/new"
+
   resources :bookmarks
 
   resources :contact_messages
@@ -26,7 +30,13 @@ StudentaInfo::Application.routes.draw do
   get "kontakt" => "index#kontakt"
   get "datenschutz" => "index#datenschutz"
   
-  
+  get "bookmarks" => "bookmarks#index", as: "bookmarks"
+  get "bookmarks/new", as: "new_bookmark"
+  get "bookmarks/:id" => "bookmarks#show", as: "bookmark"
+  get "bookmarks/:id/edit" => "bookmarks#edit", as: "edit_bookmark"
+  post "bookmarks" => "bookmarks#create"
+  put "/bookmarks/:id" => "bookmarks#update"
+  delete "bookmark/:id" => "bookmarks#destroy", as: "bookmark"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

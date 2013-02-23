@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% @title = "Liste der Links"%>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+  <![endif]-->
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	
+	<div>
+		<h3><i class="icon-list-alt"></i>Liste der Links</h3>
+	</div>
+	
+	<% if flash[:notice] %>
+	<div class="alert alert-success">
+	<p id="notice">
+		<%= flash[:notice] %>
+	</p>
+	</div>
+	<% end %>
+	
+	<ul>
+	<% @bookmarks.each do |bookmark| %>
+	<li><%= link_to bookmark.title, bookmark.url %>
+	(<%= link_to "Details", bookmark_path(bookmark) %> | 
+	<%= link_to "ändern", edit_bookmark_path(bookmark) %> | 
+	<%= link_to "löschen", bookmark,
+	confirm: "Wollen Sie diesen Datensatz wirklich löschen?",
+	method: :delete %>)
+	</li>
+	<% end %>
+</ul>
+
+<p>
+	<%= link_to "Neuen Link erstellen", new_bookmark_path%>
+</p>
+
+</body>
+</html>
