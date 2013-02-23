@@ -24,21 +24,33 @@
 			  <button type="submit" class="btn">Suchen</button>
 			</form>
 			<a href="/products/new" class="btn btn-default btn-primary disabled">Neues Buch einstellen</a>
+			<p></p>
       <!--Body content-->
 			<div id="main">
 				<% @products.each do |product| %>
-				<div class="entry">
-					<%= image_tag(product.photo) %>
-					<h3><%= product.title %></h3>
-					<%= sanitize(product.description) %>
-					<div class="price_line">
-						<span class="price"><%= number_to_currency(product.price) %></span>
-						<%= button_to 'In den Warenkorb legen', line_items_path(product_id: product), remote: true %>
-					</div>
-				</div>
+				
+					<table class="table table-condensed">
+						<tbody>
+							<tr>
+								<td width="200" heigth="220">
+									<%= image_tag(product.photo) %>
+								</td>
+								<td>
+									<h3><%= product.title %></h3>
+									<%= sanitize(product.description) %>
+									<div class="price_line">
+										<span class="price"><%= number_to_currency(product.price) %></span>
+										<%= button_to 'In den Warenkorb legen', line_items_path(product_id: product), remote: true %>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+			
 				<% end %>
 			</div>
     </div>
+		
     <div class="span3" style="background-color: #eeeeee;">
       <!--Sidebar content-->
 			<div id="side">
@@ -49,7 +61,7 @@
 						<% end %>
 				</div>
 				<hr>
-				<p><%= link_to 'Mein Warenkorb', carts_path %></p>
+				<p><%= button_to 'Mein Warenkorb', carts_path %></p>
 			</div>
     </div>
   </div>
