@@ -30,7 +30,7 @@ class BookmarksController < ApplicationController
   
   def update
     @bookmark = Bookmark.find(params[:id])
-    if bookmark.update_attributes(params[:bookmark])
+    if @bookmark.update_attributes(params[:bookmark])
       redirect_to bookmarks_path,
       notice: "Link wurde erfolgreich geändert."
     else
