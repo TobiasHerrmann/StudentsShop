@@ -1,4 +1,5 @@
 StudentaInfo::Application.routes.draw do
+
   get "bookmarks/edit"
 
   get "bookmarks/new"
@@ -29,6 +30,7 @@ StudentaInfo::Application.routes.draw do
   get "impressum" => "index#impressum"
   get "kontakt" => "index#kontakt"
   get "datenschutz" => "index#datenschutz"
+  
   
   get "bookmarks" => "bookmarks#index", as: "bookmarks"
   get "bookmarks/new", as: "new_bookmark"
