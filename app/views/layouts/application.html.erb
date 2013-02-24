@@ -85,10 +85,8 @@
           </ul>
 					<ul class="nav pull-right">
 					   <li class="divider-vertical"></li>
-							 
 					 		<% if current_user %>
-					 		 <li>Welcome, <%= current_user.email %>!</li>
-					 		 <li><%= link_to "Abmelden", destroy_user_session_path, method: :delete %></li>
+					 		 <li><%= link_to current_user.email, destroy_user_session_path, method: :delete %></li>
 					 		<% else %>
 					 		<li><%= link_to "Anmelden", new_user_session_path %></li>
 					 		<li><%= link_to "Registrieren", new_user_registration_path %></li>
@@ -115,6 +113,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
+				<ul class="nav pull-left">
+					<li>© 2013</li>
+				</ul>
 				<ul class="nav pull-right">
 				  <li><%= link_to "Impressum", impressum_path %></li>
 			    <li><%= link_to "Datenschutz", datenschutz_path %></li>
@@ -123,18 +124,3 @@
 	</div>
 </body>
 </html>
-	
-<!-- 
-	<div>
-		<p>
-		<% if current_user %>
-		 <li>Welcome, <%= current_user.email %>!</li>
-		 <li><%= button_to "Abmelden", destroy_user_session_path, method: :delete %></li>
-		<% else %>
-		<li><%= button_to "Anmelden", new_user_session_path %></li>
-		<li><%= button_to "Registrieren", new_user_registration_path %></li>
-		<% end%>
-		<li><%= button_to "Meine Bestellungen", orders_path %></li>
-		</p>
-	</div>
-	-->

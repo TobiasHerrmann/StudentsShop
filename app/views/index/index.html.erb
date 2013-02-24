@@ -13,37 +13,76 @@
 <body>
 	
 	<div>
-		<h3><i class="icon-home"></i>Herzlich Willkommen auf Stundents-Shop.de</h3>
+		<h2><i class="icon-home"></i>Herzlich Willkommen auf Stundents-Shop.de</h2>
 	</div>
 
   <div class="container">
-    <div class="row">
-      <div class="span8">
-				<p>
-					Auf dieser Webseite finden Studenten und Studieninteressierte wichtige Informationen abseits des eigentlichen Studiengangs.<br>
-					<br><strong>Was heißt das?</strong><br><br>
-					Um ein Studium in Münster vollständig zu machen, benötigt es noch ein paar weitere Dinge. Und bei genau diesen Dingen springt <strong>Students-Shop.de</strong> ein. Das Motto dieser Webseite ist relativ einfach: <strong>Studenten helfen Studenten!</strong><br> Hier können Studenten ihre Bücher verkaufen und auch angebotene Bücher kaufen. Zudem gibt es hier Informationen zum aktuellen Wohnungsmarkt. Auch hier können Wohnungen angeboten und auch gesucht werden.<br>
-					Desweiteren könnt Ihr euch in unserem Forum über weitere Themen des Studentenlebens in Münster austauschen.<br>
-					Bei Fragen könnt Ihr euch auch gerne an uns wenden. Wir freuen uns auf eure Fragen und Anregungen.
-				</p>
-				<br><br>
-				<p>
-					<a href="/users/sign_in" class="btn btn-large btn-primary disabled">Anmelden</a>
-					<a href="/users/sign_up" class="btn btn-large btn-primary disabled">Registrieren</a>
-				</p>
-      </div>
-      <div class="span4">
-				<div id="figure">
-      		<img src="/assets/imagefilm_unims.jpg" class="img-rounded">
-					<p>Westfälische Wilhelms-Universität Münster</p>
-				</div>
-				<div id="figure">
-					<img src="/assets/fh2_mittel.jpg" class="img-rounded">
-					<p>Fachhochschule Münster</p>
-      </div>
-    </div>
-  </div>
-</body>
+		
+		<div id="this-carousel-id" class="carousel slide"><!-- class of slide for animation -->
+		  <div class="carousel-inner">
+		    <div class="item active"><!-- class of active since it's the first item -->
+		      <img src="/assets/BibliothekSkaliert.jpg">
+		      <div class="carousel-caption">
+						<a href="/store/index" class="btn btn-primary btn-large">Buchshop für Studenten »</a>
+		      </div>
+		    </div>
+		    <div class="item">
+		      <img src="/assets/wohnungsmarkt.jpg">
+		      <div class="carousel-caption">
+						<a href="" class="btn btn-primary btn-large">Wohnen in Münster »</a>
+		      </div>
+		    </div>
+		    <div class="item">
+		      <img src="/assets/Studentengruppe.jpg" >
+		      <div class="carousel-caption">
+						<a href="#" class="btn btn-primary btn-large">Austausch mit Studenten »</a>
+		      </div>
+		    </div>
+		    <div class="item">
+		      <img src="/assets/Empfehlungen.jpg">
+		      <div class="carousel-caption">
+						<a href="/bookmarks" class="btn btn-primary btn-large">Empfehlungen von Studenten »</a>
+		      </div>
+		    </div>
+		  </div><!-- /.carousel-inner -->
+		  <!--  Next and Previous controls below
+		        href values must reference the id for this carousel -->
+		    <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+		    <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+		</div><!-- /.carousel -->
+		
+		<!-- Example row of columns -->
+		<div class="row">
+			<div class="span3">
+			  <h2>Buchshop für Studenten</h2>
+			    <p>Im Buchshop besteht für Studenten die Möglichkeit eigene Bücher, die sie nicht mehr benötigen zu verkaufen. Außerdem können sie so auch Bücher von anderen Studenten erwerben. Die Bücher verstauben somit nicht im Regal. Man hilft jemandem mit seinem Buch und es lassen sich auch noch Kosten sparen.  </p>
+			    <p><a class="btn" href="#">mehr &raquo;</a></p>
+			 </div>
+ 			<div class="span3">
+ 			  <h2>Wohnen in Münster</h2>
+ 			    <p>Münster ist eine Studentenstadt. Zu Beginn jedes Semester kommen Studenten nach Münster und suchen zunächst eine Bleibe. Auf dieser Seite können Studenten ihre Wohnungen anbieten und verkaufen, da sie umziehen oder ins Ausland gehen. Gemeinsam lässt sich ein Dach über dem Kopf finden. </p>
+ 			    <p><a class="btn" href="#">mehr &raquo;</a></p>
+ 			 </div>
+			 <div class="span3">
+			  <h2>Austausch mit Studenten</h2>
+			   <p>In einem Forum können sich Studenten über sämtliche Themen rund um das Studieren in Münster unterhalten. Es können neue Themen erstellt werden und Kommentare dazu verfasst werden. Somit steht die gegenseitige Hilfe untereinander im Vordergrund und alles kann besprochen werden. </p>
+			   <p><a class="btn" href="#">mehr &raquo;</a></p>
+			  </div>
+			  <div class="span3">
+			   <h2>Empfehlungen von Studenten</h2>
+			    <p>Jeder Student macht seine eigenen Erfahrungen und nun gibt es eine Möglichkeit diese auch weiterzugeben. Hier lassen ich nützliche Links rund um das Studentenleben in Münster posten. Egal ob hilfreiche Lerntipps, Webseiten der Fakultäten oder auch örtliche Lokalitäten.</p>
+			    <p><a class="btn" href="#">mehr &raquo;</a></p>
+			   </div>
+			  </div>
+  	</div>
+		
+		<script>
+		$('.carousel').carousel({
+			interval: 8000
+			});
+		</script>
+		
+	</body>
 </html>
 
 
