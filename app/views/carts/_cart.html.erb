@@ -9,7 +9,7 @@
 	</tr>
 </table> 
 <br>
-<%= button_to 'Zur Kasse gehen', new_order_path, method: :get %>
-<%= button_to 'Warenkorb leeren', cart, method: :delete, 
-						confirm: 'Sind Sie sicher, dass Sie den Warenkorb leeren möchten?' %>
+<%= link_to 'Zur Kasse gehen', new_order_path, method: :get, :class => 'btn btn-success' %>
+<%= link_to 'Warenkorb leeren', cart, method: :delete, 
+						confirm: 'Sind Sie sicher, dass Sie den Warenkorb leeren möchten?', :class => 'btn btn-danger' %>
 						

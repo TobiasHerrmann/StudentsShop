@@ -12,11 +12,20 @@
 </head>
 <body>
 	
+	<h3><i class="icon-comment"></i>Kontakt</h3>
+	
+	<p></p>
+	<div class="row-fluid">
+		<div class="span12">
+			<img src="/assets/Kontakt.jpg">
+		</div>
+	</div>
+	<p></p>
+	<hr>
+	
 	<% if notice %>
 	<p id="notice"><%= notice %></p>
 	<% end %>
-	
-	<h3><i class="icon-comment"></i>Kontakt</h3>
 
   <div class="container">
     <div class="row">
@@ -34,7 +43,8 @@
 					e-Mail: tobse.herrmann5@googlemail.com<br>
 				</address>
 				<p>
-					<a href="/contact_messages/new" class="btn btn-large btn-primary disabled">Nachricht schreiben</a>
+					<%= link_to "Nachricht schreiben", kontakt_path, :class => 'btn btn-info' %>
+					<%= link_to "Impressum", impressum_path, :class => 'btn btn-info' %>
 				</p>
       </div>
 			
@@ -54,8 +64,7 @@
     </div>
   </div>
 	<p>
-		<a class="btn" href="/impressum">Impressum</a>
-		<a class="btn" href="/index">Zurück zur Startseite</a>
+		<%= link_to "Zurück zur Startseite", index_path, :class => 'btn btn-primary' %>
 	</p>
 </body>
 </html>
