@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 class BookmarksController < ApplicationController
+  load_and_authorize_resource
   
   def index
     @bookmarks = Bookmark.all

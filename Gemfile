@@ -43,8 +43,7 @@ gem 'pdfkit'
 
 gem 'rolify'
 
-
-
+gem 'cancan'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
