@@ -84,7 +84,6 @@
             <li><%= link_to "Kontakt", kontakt_path %></li> 
           </ul>
 					<ul class="nav pull-right">
-					   <li class="divider-vertical"></li>
 					 		<% if current_user %>
 					 		 <li><%= link_to current_user.email, destroy_user_session_path, method: :delete %></li>
 					 		<% else %>
@@ -100,6 +99,7 @@
 
 	<div id="wrap">
 		<div id="main" class="container clear-top">
+			<p class="notice"><%= notice %></p>
     	<div class="row">
       	<div class="span12"><%= yield %></div>
     	</div>

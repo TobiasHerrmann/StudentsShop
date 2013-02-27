@@ -7,6 +7,8 @@ gem 'rails', '3.2.8'
 
 gem 'sqlite3'
 
+gem 'activeadmin'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -39,7 +41,9 @@ gem 'rspec-rails'
 
 gem 'pdfkit'
 
-gem 'will_paginate', '~> 3.0'
+gem 'rolify'
+
+
 
 
 # To use Jbuilder templates for JSON

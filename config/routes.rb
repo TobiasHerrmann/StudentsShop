@@ -1,5 +1,7 @@
 StudentaInfo::Application.routes.draw do
 
+  ActiveAdmin.routes(self)
+
   get "bookmarks/edit"
 
   get "bookmarks/new"
