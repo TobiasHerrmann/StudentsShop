@@ -46,7 +46,7 @@
 								</td>
 								<td>
 									<h3><%= product.title %></h3>
-									<%= sanitize(product.description) %>
+									<strong>Beschreibung: </strong><%= sanitize(product.description) %>
 									<div class="price_line">
 										<p class="text-success">
 											<span class="price"><strong><%= number_to_currency(product.price) %></strong></span>

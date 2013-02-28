@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  attr_accessible :photo, :title, :description, :image_url, :price
+  attr_accessible :photo, :title, :description, :price
   has_attached_file :photo, :styles => { :small => "150x150>" }
   
   
@@ -15,15 +15,10 @@ class Product < ActiveRecord::Base
   #...
    
   validates :title, uniqueness: true
-  validates :image_url, allow_blank: true, format: {
-    with:    %r{\.(gif|jpg|png)$}i,
-    message: 'must be a URL for GIF, JPG or PNG image.'
-  }
+  
   validates :title, length: {minimum: 10}
   
-  validates_attachment_presence :photo
-  validates_attachment_size :photo, :less_than => 5.megabytes
-  validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
+  
   
   
   private

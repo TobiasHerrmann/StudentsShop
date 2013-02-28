@@ -24,7 +24,32 @@ Bookmark.create(title: 'amazon.de', url:'http://www.amazon.de', comment: 'amazon
 Bookmark.create(title: 'pearson-studium', url:'http://www.pearson-studium.de', comment: 'Lehrbücher versandkostenfrei')
 Bookmark.create(title: 'zweitag', url:'http://www.zweitag.de/en', comment: 'zweitag is a software engineering concultancy from Münster, Germany')
 
-puts "Daten erfolgreich geladen."
+puts "Daten der Bookmarks erfolgreich geladen."
+
+Product.delete_all
+Product.create(title: 'Computernetzwerke (Pearson Studium - IT)', description: 'Dies ist eine Testdatei', price: 59.99)
+Product.create(title: 'Einführung in die Informatik', description: 'Dies ist eine Testdatei', price: 59.99)
+Product.create(title: 'Ruby on Rails 3.1 - Das Entwickler-Handbuch', description: 'Dies ist eine Testdatei', price: 59.99)
+Product.create(title: 'Grundkurs Programmieren in Java', description: 'Dies ist eine Testdatei', price: 59.99)
+Product.create(title: 'Jetzt lerne in Java 7', description: 'Dies ist eine Testdatei', price: 59.99)
+Product.create(title: 'Java ist auch eine Insel: Das umfassende Handbuch', description: 'Dies ist eine Testdatei', price: 59.99)
+Product.create(title: 'HTML5 & CSS3: Webentwicklung mit den Standards von morgen', description: 'Dies ist eine Testdatei', price: 59.99)
+
+Product.create(title: 'Einführung in die Allgemeine BWL', description: 'Dies ist eine Testdatei', price: 59.99)
+Product.create(title: 'BWL für Dummies', description: 'Dies ist eine Testdatei', price: 59.99)
+Product.create(title: 'Handelsgesetzbuch', description: 'Dies ist eine Testdatei', price: 59.99)
+Product.create(title: 'Arbeitsgesetze', description: 'Dies ist eine Testdatei', price: 59.99)
+Product.create(title: 'Einkommenssteuerrecht', description: 'Dies ist eine Testdatei', price: 59.99)
+Product.create(title: 'Grundzüge der VWL', description: 'Dies ist eine Testdatei', price: 59.99)
+
+Product.create(title: 'Mathematik', description: 'Dies ist eine Testdatei', price: 59.99)
+Product.create(title: 'Mathematik zum Studienbeginn', description: 'Dies ist eine Testdatei', price: 59.99)
+Product.create(title: 'Warum Mathematik glücklich macht', description: 'Dies ist eine Testdatei', price: 59.99)
+Product.create(title: 'Lineare Algebra: Eine Einführung', description: 'Dies ist eine Testdatei', price: 59.99)
+Product.create(title: 'Lehrbuch der Analysis', description: 'Dies ist eine Testdatei', price: 59.99)
+Product.create(title: 'Analysis für Dummies', description: 'Dies ist eine Testdatei', price: 59.99)
+
+puts "Daten der Lehrbücher erfolgreich geladen"
               
 pass = SecureRandom.hex(5)
 admin = User.create email: 'admin@admin.de', password: pass, password_confirmation: pass
