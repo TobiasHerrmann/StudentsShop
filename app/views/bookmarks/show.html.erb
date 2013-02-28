@@ -12,29 +12,40 @@
 </head>
 <body>
 	<h3>Detail zum Link</h3>
-	<p>
-		<b>Titel:</b>
-		<%= @bookmark.title%>
-	</p>
-	<p>
-		<b>URL:</b>
-		<%= @bookmark.url%>
-	</p>
-	<p>
-		<b>Kommentar:</b>
-		<%= @bookmark.comment%>
-	</p>
-	<p>
-		<b>Erstellt am:</b>
-		<%= @bookmark.created_at%>
-	</p>
-	<p>
-		<b>Geändert am:</b>
-		<%= @bookmark.updated_at%>
-	</p>
+	
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Titel</th>
+				<th>URL</th>
+				<th>Kommentar</th>
+				<th>Erstellt am:</th>
+				<th>Geändert am:</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<%= @bookmark.title%>
+				</td>
+				<td>
+					<%= @bookmark.url%>
+				</td>
+				<td>
+					<%= @bookmark.comment%>
+				</td>
+				<td>
+					<%= @bookmark.created_at%>
+				</td>
+				<td>
+					<%= @bookmark.updated_at%>
+				</td>
+			</tr>
+			</tbody>
+		</table>
 	
 	<p>
-		<%= link_to "Zurück zur Liste", bookmarks_path %>
+		<%= link_to "Zurück zur Liste »", bookmarks_path, :class => 'btn btn-primary' %>
 	</p>
 
 </body>

@@ -27,12 +27,12 @@
 
 <div class="container-fluid">
   <div class="row-fluid">
-    <div class="span9">
+    <div class="span8">
 			<form class="form-search">
 			  <input type="text" class="input-medium search-query">
 			  <button type="submit" class="btn">Suchen</button>
 			</form>
-			<%= link_to "Neues Buch einstellen", new_product_path, :class => 'btn btn-primary' %>
+			<%= link_to "Neues Buch einstellen »", new_product_path, :class => 'btn btn-primary' %>
 			<p></p>
       <!--Body content-->
 			<div id="main">
@@ -47,11 +47,12 @@
 								<td>
 									<h3><%= product.title %></h3>
 									<strong>Beschreibung: </strong><%= sanitize(product.description) %>
+									<p><strong>Kategorie: </strong><%= product.category %></p>
 									<div class="price_line">
 										<p class="text-success">
 											<span class="price"><strong><%= number_to_currency(product.price) %></strong></span>
 										</p>
-										<%= button_to 'In den Warenkorb legen', line_items_path(product_id: product), remote: true %>
+										<%= button_to 'In den Warenkorb legen »', line_items_path(product_id: product), remote: true %>
 									</div>
 								</td>
 							</tr>
@@ -62,7 +63,7 @@
 			</div>
     </div>
 		
-    <div class="span3" style="background-color: #eeeeee;">
+    <div class="span4" style="background-color: #eeeeee;">
       <!--Sidebar content-->
 			<div id="side">
 				<div id="cart">
@@ -72,7 +73,7 @@
 						<% end %>
 				</div>
 				<hr>
-				<p><%= button_to 'Mein Warenkorb', carts_path, :class => 'btn btn-primary' %></p>
+				<p><%= button_to 'Mein Warenkorb »', carts_path, :class => 'btn btn-primary' %></p>
 			</div>
     </div>
   </div>

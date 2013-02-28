@@ -22,17 +22,18 @@
 		  <div class="control-group">
 		    <%= f.label :pay_type, :class => 'control-label' %>
 		    <div class="controls">
-		      <%= f.text_field :pay_type, :class => 'select_field' %>
-		    </div>
+					<%= f.select(:pay_type, options_for_select([['Bankeinzug'], ['Kreditkarte'], ['auf Rechnung']])) %>
+					<option value="1">Bankeinzug</option>
+					<option value="2">Kreditkarte</option>
+					<option value="3">auf Rechnung</option>
+				</div>
 		  </div>
 
-		  
-		
 	</div>
 	<div class="span4">
 		<img src="/assets/Einkaufswagen_37.jpg" class="img-polaroid"><p></p>
 		<p>
-			Ihr habt euch erfolgreich ein oder mehrere Bücher ausgewählt und seit nun soweit eure Bestellung aufzugeben. Ihr müsst einfach nur euren Namen, eure Adresse, eure Email-Adresse und die Zahlungsart <strong>(Check, Credit Card, Purchase order)</strong> angeben. Danach auf "Create order" und eure Bestellung ist aufgegeben <br> Viel Spaß mit der neuen Ware!
+			Ihr habt euch erfolgreich ein oder mehrere Bücher ausgewählt und seit nun soweit eure Bestellung aufzugeben. Ihr müsst einfach nur euren Namen, eure Adresse, eure Email-Adresse und die Zahlungsart <strong>(Bankeinzug, Kreditkarte, auf Rechnung)</strong> angeben. Danach auf "Create order" und eure Bestellung ist aufgegeben <br> Viel Spaß mit der neuen Ware!
 	</div>
 </div>
 <div class="row-fluid">

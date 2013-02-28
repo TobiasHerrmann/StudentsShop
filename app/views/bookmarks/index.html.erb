@@ -50,13 +50,13 @@
 				</td>
 				<td>
 					<% if can?(:read, Bookmark) %>
-						<%= link_to "Details", bookmark_path(bookmark), :class => 'btn btn-mini btn-info' %>
+						<%= link_to "Details »", bookmark_path(bookmark), :class => 'btn btn-mini btn-info' %>
 					<% end %> 
 					<% if can?(:update, Bookmark) %>
-					<%= link_to "ändern", edit_bookmark_path(bookmark), :class => 'btn btn-mini btn-warning' %>
+					<%= link_to "ändern »", edit_bookmark_path(bookmark), :class => 'btn btn-mini btn-warning' %>
 					<% end %>
 					<% if can?(:delete, Bookmark) %> 
-					<%= link_to "löschen", bookmark,
+					<%= link_to "löschen »", bookmark,
 						confirm: "Wollen Sie diesen Datensatz wirklich löschen?",
 						method: :delete, :class => 'btn btn-mini btn-danger' %>
 					<% end %>
@@ -68,7 +68,7 @@
 
 <p>
 	<% if can?(:create, Bookmark) %>
-	<%= link_to "Neuen Link einstellen >>", new_bookmark_path, :class => 'btn btn-primary' %>
+	<%= link_to "Neuen Link einstellen »", new_bookmark_path, :class => 'btn btn-primary' %>
 	<% end %>
 </p>
 

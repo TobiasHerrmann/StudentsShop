@@ -14,6 +14,17 @@
 		    </div>
 		  </div>
 		  <div class="control-group">
+		    <%= f.label :category, :class => 'control-label' %>
+		    <div class="controls">
+					<%= f.select(:category, options_for_select([['Informatik'], ['Wirtschaft'], ['Mathematik'],['Medizin'], ['Physik']])) %>
+					<option value="1">Informatik</option>
+					<option value="2">Wirtschaft</option>
+					<option value="3">Mathematik</option>
+					<option value="4">Medizin</option>
+					<option value="5">Physik</option>
+				</div>
+		  </div>
+		  <div class="control-group">
 		    <%= f.label :price, :class => 'control-label' %>
 		    <div class="controls">
 		      <%= f.text_field :price, :class => 'text_field' %>

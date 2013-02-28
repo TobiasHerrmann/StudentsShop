@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  attr_accessible :photo, :title, :description, :price
+  attr_accessible :photo, :title, :description, :category, :price
   has_attached_file :photo, :styles => { :small => "150x150>" }
   
   
@@ -9,13 +9,12 @@ class Product < ActiveRecord::Base
   #...
   
   before_destroy :ensure_not_referenced_by_any_line_item
-  validates :title, :description, presence: true
+  validates :title, :description, :category, presence: true
   validates :price, numericality: {greater_than_or_equal_to: 0.01}
   
   #...
    
   validates :title, uniqueness: true
-  
   validates :title, length: {minimum: 10}
   
   
