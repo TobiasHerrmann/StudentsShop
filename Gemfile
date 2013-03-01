@@ -26,7 +26,7 @@ end
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
-  gem 'coffee-script-source'
+  gem 'coffee-script-source', '~> 1.4.0'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
