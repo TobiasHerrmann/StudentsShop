@@ -75,16 +75,22 @@
 							<p><strong>Fläche (qm): </strong><%= apartment.area %></p>
 							<p><strong>Zimmer: </strong><%= apartment.rooms %></p>
 							<p class="text-success"><strong><%= apartment.price %></strong></p>
-							<p><%= link_to 'mehr »', apartment_path(apartment), :class => 'btn btn-mini btn-primary' %></p>
+							<p>
+								<% if can?(:read, Apartment) %>
+								<%= link_to 'mehr »', apartment_path(apartment), :class => 'btn btn-mini btn-info' %>
+								<% end %> 
+							</p>
 						</td>
 						<td>
-		          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-		                      edit_apartment_path(apartment), :class => 'btn btn-mini' %>
-		          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-		                      apartment_path(apartment),
-		                      :method => :delete,
-		                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-		                      :class => 'btn btn-mini btn-danger' %>
+							<% if can?(:update, Apartment) %>
+							<%= link_to "ändern »", edit_apartment_path(bookmark), :class => 'btn btn-mini btn-warning' %>
+							<% end %>
+							<% if can?(:delete, Apartment) %> 
+							<%= link_to "löschen »", apartment,
+								confirm: "Wollen Sie diesen Datensatz wirklich löschen?",
+								method: :delete, :class => 'btn btn-mini btn-danger' %>
+							<% end %>
+		          
 						</td>
 					</tr>
 				</tbody>

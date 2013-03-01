@@ -50,6 +50,60 @@ Product.create(title: 'Lehrbuch der Analysis', description: 'Dies ist eine Testd
 Product.create(title: 'Analysis für Dummies', description: 'Dies ist eine Testdatei', category: 'Mathematik', price: 59.99)
 
 puts "Daten der Lehrbücher erfolgreich geladen"
+
+Apartment.delete_all
+Apartment.create(title: 'Erdgeschosswohnung mit Garten', adress: 'Sesamstraße 3, 45746 Nimmerland', area: 150, 
+description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+ aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+  est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+   dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+    sanctus est Lorem ipsum dolor sit amet.', 
+category: 'Mietwohnung', owner: 'Peter Pan', rooms: 8, price: 700)
+Apartment.create(title: 'Dachgeschosswohnung', adress: 'Tibusstraße 3, 48351 Münster', area: 120, 
+description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+ aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+  est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+   dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+    sanctus est Lorem ipsum dolor sit amet.', 
+category: 'Mietwohnung', owner: 'Peter Pan', rooms: 9, price: 760)
+Apartment.create(title: 'Studentenapartment im EG', adress: 'Tulpenstiege 5, 48341 Altenberge', area: 40, 
+description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+ aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+  est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+   dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+    sanctus est Lorem ipsum dolor sit amet.', 
+category: 'Studentenwohnung', owner: 'Peter Pan', rooms: 2, price: 250)
+Apartment.create(title: '3-Zimmer-Wohnung mit Balkon', adress: 'Jahnstraße 9, 48341 Altenberge', area: 78, 
+description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+ aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+  est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+   dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+    sanctus est Lorem ipsum dolor sit amet.', 
+category: 'Mietwohnung', owner: 'Peter Pan', rooms: 3, price: 430)
+Apartment.create(title: '2-Zimmer-Wohnung mit Einbauküche und Balkon', adress: 'Sesamstraße 32, 45746 Nimmerland', area: 67, 
+description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+ aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+  est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+   dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+    sanctus est Lorem ipsum dolor sit amet.', 
+category: 'Mietwohnung', owner: 'Peter Pan', rooms: 4, price: 356)
+Apartment.create(title: 'Studenten-WG-Zimmer', adress: 'Johann-Krane-Weg 25, 48351 Münster', area: 12, 
+description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+ aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+  est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+   dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+    sanctus est Lorem ipsum dolor sit amet.', 
+category: 'WG', owner: 'Peter Pan', rooms: 1, price: 200)
+Apartment.create(title: 'WG-Zimmer auf Zeit', adress: 'Bachstraße 12', area: 8, 
+description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+ aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+  est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+   dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+    sanctus est Lorem ipsum dolor sit amet.', 
+category: 'WG', owner: 'Peter Pan', rooms: 1, price: 150)
+
+
+puts "Daten der Wohnungen erfolgreich geladen"
               
 pass = SecureRandom.hex(5)
 admin = User.create email: 'admin@admin.de', password: pass, password_confirmation: pass

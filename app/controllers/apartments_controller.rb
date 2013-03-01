@@ -1,4 +1,6 @@
 class ApartmentsController < InheritedResources::Base
+  load_and_authorize_resource
+  
   def index
     @q = Apartment.ransack(params[:q])
     @apartments = @q.result
