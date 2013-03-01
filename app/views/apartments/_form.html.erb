@@ -1,4 +1,6 @@
-<%= form_for @apartment, :html => { :class => 'form-horizontal' } do |f| %>
+<div class="row-fluid">
+	<div class="span6">
+<%= form_for @apartment, :html => { :class => 'form-horizontal', :mulitpart => true } do |f| %>
   <div class="control-group">
     <%= f.label :title, :class => 'control-label' %>
     <div class="controls">
@@ -18,6 +20,12 @@
     </div>
   </div>
   <div class="control-group">
+    <%= f.label :rooms, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :rooms, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
     <%= f.label :description, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_area :description, :class => 'text_area' %>
@@ -26,8 +34,14 @@
   <div class="control-group">
     <%= f.label :category, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :category, :class => 'text_field' %>
-    </div>
+			<%= f.select(:category, options_for_select([['Mietwohnung'], ['Wohnen auf Zeit'], ['WG'],['Studentenwohnung'], ['Häuser mieten'], ['Häuser kaufen']])) %>
+			<option value="1">Mietwohnung</option>
+			<option value="2">Wohnen auf Zeit</option>
+			<option value="3">WG</option>
+			<option value="4">Studentenwohnung</option>
+			<option value="5">Häuser mieten</option>
+			<option value="6">Häuser kaufen</option>
+		</div>
   </div>
   <div class="control-group">
     <%= f.label :owner, :class => 'control-label' %>
@@ -41,10 +55,28 @@
       <%= f.text_field :price, :class => 'text_field' %>
     </div>
   </div>
+  <div class="control-group">
+		<div class="controls">
+		 	<%= f.file_field :photo %>
+		</div>
+  </div>
+	
+	</div>
+	<div class="span4">
+		<img src="/assets/studentenwohnung.jpg" class="img-polaroid"><p></p>
+		<p>
+			Hier können ganz schnell und einfach Wohnungen und auch Häuser angeboten werden. Häuser und Wohnungen der verschiedensten Kategorien und Größen können hier angeboten werden. Lediglich das Formular muss ausgefüllt werden und das Angebot befindet sich auf dem Markt. <br> Viel Erfolg beim Verkauf!
+		</p>
+	</div>
+</div>
 
-  <div class="form-actions">
+<div class="row-fluid">
+	<div class="span12">
+		<div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 apartments_path, :class => 'btn' %>
   </div>
 <% end %>
+</div>
+</div>

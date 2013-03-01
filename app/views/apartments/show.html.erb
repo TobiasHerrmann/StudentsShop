@@ -1,24 +1,39 @@
 <%- model_class = Apartment -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+  <h1>Details zur Immobilie</h1>
 </div>
-
-<dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
-  <dd><%= @apartment.title %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:adress) %>:</strong></dt>
-  <dd><%= @apartment.adress %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:area) %>:</strong></dt>
-  <dd><%= @apartment.area %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
-  <dd><%= @apartment.description %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:category) %>:</strong></dt>
-  <dd><%= @apartment.category %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:owner) %>:</strong></dt>
-  <dd><%= @apartment.owner %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
-  <dd><%= @apartment.price %></dd>
-</dl>
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+				<%= image_tag @apartment.photo(:small) %>
+			</td>
+			<td>
+				<dl class="dl-horizontal">
+				  <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
+				  <dd><%= @apartment.title %></dd>
+				  <dt><strong><%= model_class.human_attribute_name(:adress) %>:</strong></dt>
+				  <dd><%= @apartment.adress %></dd>
+				  <dt><strong><%= model_class.human_attribute_name(:area) %>:</strong></dt>
+				  <dd><%= @apartment.area %></dd>
+				  <dt><strong><%= model_class.human_attribute_name(:rooms) %>:</strong></dt>
+				  <dd><%= @apartment.rooms %></dd>
+				  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
+				  <dd><%= @apartment.description %></dd>
+				  <dt><strong><%= model_class.human_attribute_name(:category) %>:</strong></dt>
+				  <dd><%= @apartment.category %></dd>
+				  <dt><strong><%= model_class.human_attribute_name(:owner) %>:</strong></dt>
+				  <dd><%= @apartment.owner %></dd>
+				  <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
+				  <dd><%= @apartment.price %></dd>
+				</dl>
+			</td>
+			<td>
+				<%= link_to "Anbieter kontaktieren »", new_product_path, :class => 'btn btn-large btn-primary' %>
+			</td>
+		</tr>
+	</tbody>
+</table>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),

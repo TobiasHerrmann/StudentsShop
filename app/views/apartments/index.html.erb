@@ -1,4 +1,13 @@
-<%- model_class = Apartment -%>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wohnungsmarkt</title>
+	<style type="text/css">
+		.span4 {
+			background-color: #dddddd;
+		}
+	</style>
+</head>
 
 <body class="<%= controller.controller_name %>">
 <div>		
@@ -15,19 +24,56 @@
 <hr>
 
 <div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+			<h3>Wohnungssuche</h3>
+			<%= search_form_for @q, :html => {:class => "form-inline"} do |f| %>
+				<p>
+					<%= f.label :title_cont, "Nach Titel suchen" %>
+					<%= f.text_field :title_cont %>
+				</p>
+				<p>
+					<%= f.label :price_gteq, "Preis zwischen" %>
+					<%= f.text_field :price_gteq %>
+					<%= f.label :price_lteq, "und" %>
+					<%= f.text_field :price_lteq %>
+				</p>
+				<p>
+					<%= f.label :area_gteq, "Fläche zwischen" %>
+					<%= f.text_field :area_gteq %>
+					<%= f.label :area_lteq, "und" %>
+					<%= f.text_field :area_lteq %>
+				</p>
+				<p>
+					<%= f.label :rooms_gteq, "Fläche zwischen" %>
+					<%= f.text_field :rooms_gteq %>
+					<%= f.label :rooms_lteq, "und" %>
+					<%= f.text_field :rooms_lteq %>
+				</p>
+				<p>
+					<%= f.label :adress_cont, "Nach Ort suchen" %>
+					<%= f.text_field :adress_cont %>
+				</p>
+		    <p><%= f.submit "Suchen", :name => nil, :class => 'btn btn-primary' %></p>
+		<% end %>
+		</div>
+	</div>
+	<hr>
   <div class="row-fluid">
-    <div class="span8">
+    <div class="span12">
+			<h3>Immobilien</h3>
 			<table class="table table-striped">
 				<% @apartments.each do |apartment| %>
 			  <tbody>
 			    <tr>
-						<td>
-							PHOTO
+						<td width="200" heigth="220">
+							<%= image_tag(apartment.photo) %>
 						</td>
 						<td>
 							<h3><%= apartment.title %></h3>
 							<strong>Adresse: </strong><%= sanitize(apartment.adress) %>
 							<p><strong>Fläche (qm): </strong><%= apartment.area %></p>
+							<p><strong>Zimmer: </strong><%= apartment.rooms %></p>
 							<p class="text-success"><strong><%= apartment.price %></strong></p>
 							<p><%= link_to 'mehr »', apartment_path(apartment), :class => 'btn btn-mini btn-primary' %></p>
 						</td>
@@ -45,16 +91,12 @@
 				<% end %>
 			</table>
 		</div>
-		<div class="span4">
-			
-		</div>
 	</div>
+</div>
+<%= link_to "Neue Wohnung anbieten »", new_apartment_path, :class => 'btn btn-primary' %>
 </div>
 </body>
 
 
 
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_apartment_path,
-            :class => 'btn btn-primary' %>
