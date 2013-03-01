@@ -1,5 +1,7 @@
 StudentaInfo::Application.routes.draw do
 
+  resources :offer_messages
+
   resources :apartments
 
   ActiveAdmin.routes(self)

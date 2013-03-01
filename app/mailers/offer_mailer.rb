@@ -1,20 +1,20 @@
-class ContactMailer < ActionMailer::Base
-  layout 'contact'
+class OfferMailer < ActionMailer::Base
+  layout 'offer'
   
   default from: "from@example.com"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
-  #   en.contact_mailer.confirmation.subject
+  #   en.offer_mailer.confirmation.subject
   #
   def confirmation(email)
     @greeting = "Hi"
-
+    
     mail(to: email,
     from: "tobse.herrmann5@googlemail.com",
-    subject: "Ihre Kontaktnachricht erhalten") do |format|
-      format.html {render layout: 'contact'}
+    subject: "Ihr Angebot erhalten") do |format|
+      format.html { render layout: 'offer' }
       format.text
     end
   end
@@ -22,15 +22,16 @@ class ContactMailer < ActionMailer::Base
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
-  #   en.contact_mailer.inquiry.subject
+  #   en.offer_mailer.inquiry.subject
   #
-  def inquiry(contact_message)
+  def inquiry(offer_message)
     @greeting = "Hi"
     
-    @contact_message = contact_message
+    @offer_message = offer_message
 
     mail to: "tobse.herrmann5@googlemail.com",
-    from: contact_message.email,
-    subject: "Neue Kontaktanfrage"
+    from: offer_message.email,
+    subject: "Neue Angebotsanfrage"
+
   end
 end
