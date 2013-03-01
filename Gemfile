@@ -9,6 +9,10 @@ gem 'sqlite3'
 
 gem 'activeadmin'
 
+group :production do
+  gem 'pg'
+end
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
