@@ -9,6 +9,12 @@ gem 'sqlite3'
 
 gem 'activeadmin'
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'guard-rspec'
+  gem 'faker'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -27,6 +33,7 @@ group :assets do
   gem "paperclip", "~> 3.0"
 end
 
+gem 'unicorn'
 
 gem 'jquery-rails'
 
@@ -36,8 +43,6 @@ gem 'bcrypt-ruby', :require => "bcrypt"
 gem 'minitest'
 
 gem 'devise'
-
-gem 'rspec-rails'
 
 gem 'pdfkit'
 
