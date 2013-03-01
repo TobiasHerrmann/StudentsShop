@@ -1,5 +1,7 @@
 StudentaInfo::Application.routes.draw do
 
+  resources :apartments
+
   ActiveAdmin.routes(self)
 
   get "bookmarks/edit"

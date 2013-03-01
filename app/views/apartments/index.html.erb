@@ -1,0 +1,60 @@
+<%- model_class = Apartment -%>
+
+<body class="<%= controller.controller_name %>">
+<div>		
+	<h2><i class="icon-home"></i>Wohnungsmarkt</h2>
+</div>
+
+<p></p>
+<div class="row-fluid">
+	<div class="span12">
+		<img src="/assets/wohnungssuche.jpg">
+	</div>
+</div>
+<p></p>
+<hr>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span8">
+			<table class="table table-striped">
+				<% @apartments.each do |apartment| %>
+			  <tbody>
+			    <tr>
+						<td>
+							PHOTO
+						</td>
+						<td>
+							<h3><%= apartment.title %></h3>
+							<strong>Adresse: </strong><%= sanitize(apartment.adress) %>
+							<p><strong>Fläche (qm): </strong><%= apartment.area %></p>
+							<p class="text-success"><strong><%= apartment.price %></strong></p>
+							<p><%= link_to 'mehr »', apartment_path(apartment), :class => 'btn btn-mini btn-primary' %></p>
+						</td>
+						<td>
+		          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+		                      edit_apartment_path(apartment), :class => 'btn btn-mini' %>
+		          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+		                      apartment_path(apartment),
+		                      :method => :delete,
+		                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+		                      :class => 'btn btn-mini btn-danger' %>
+						</td>
+					</tr>
+				</tbody>
+				<% end %>
+			</table>
+		</div>
+		<div class="span4">
+			
+		</div>
+	</div>
+</div>
+</body>
+
+
+
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_apartment_path,
+            :class => 'btn btn-primary' %>
