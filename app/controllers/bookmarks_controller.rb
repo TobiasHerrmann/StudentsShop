@@ -4,7 +4,8 @@ class BookmarksController < ApplicationController
   load_and_authorize_resource
   
   def index
-    @bookmarks = Bookmark.all
+    @q = Bookmark.ransack(params[:q])
+    @bookmarks = @q.result
   end
   
   def edit
