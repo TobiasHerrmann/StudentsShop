@@ -58,6 +58,9 @@ gem 'rolify'
 gem 'cancan'
 
 gem 'ransack'
+
+gem 'heroku'
+
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
